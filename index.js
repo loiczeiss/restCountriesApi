@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 app.use(express.json())
-const data = require('../data.json')
+const data = require('./data.json')
 app.use(cors());
 
 // REST API to get all products details at once
@@ -17,3 +17,5 @@ app.get("/", (req, res) => {
 app.listen(5000, () => {
     console.log('Server started on port 5000');
 });
+
+module.exports = app;
